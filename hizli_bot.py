@@ -2,7 +2,6 @@ import yfinance as yf
 import pandas as pd
 import requests
 
-# Telegram Bilgileriniz
 TOKEN = "9059337535:AAGOV1YLbc38UIMdzzF_sHRQwF8y8pg-oGY"
 CHAT_ID = "8786222371"
 
