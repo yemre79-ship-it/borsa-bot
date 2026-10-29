@@ -1,10 +1,9 @@
-name: Borsa Bot Otomatik Calisir
+name: Borsa Bot Otomatik Çalışır
 
 on:
-  schedule:
-    # Her gün Türkiye saati ile sabah 09:30 (UTC 06:30)
-    - cron: '30 6 * * *'
   workflow_dispatch:
+  schedule:
+    - cron: '30 6 * * *'  # Türkiye saati ile 09:30
 
 jobs:
   run-bot:
@@ -20,8 +19,10 @@ jobs:
 
       - name: Kutuphaneleri Yukle
         run: |
-          pip install yfinance requests
+          pip install yfinance pandas requests
 
-      - name: Botu Calistir
-        run: |
-          python bot.py
+      - name: Ana Botu Calistir
+        run: python bot.py
+
+      - name: Hizli Boti Calistir
+        run: python hizli_bot.py
