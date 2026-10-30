@@ -3,7 +3,7 @@ name: Borsa Bot Otomatik Çalışır
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 6 * * *'  # Türkiye saati ile 09:30
+    - cron: '30 5 * * *'  # Türkiye saati ile 08:30 (veya 09:30 hedefli erkene alma)
 
 jobs:
   run-bot:
